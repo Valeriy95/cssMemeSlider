@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/normalize.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <title>cssMemeSlider</title>
+</head>
+<body>
+    <div class="slider-container">
+        <!-- Скрытые радио-кнопки для переключения -->
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
+
+        <!-- Слайды -->
+        <div class="slides">
+            <div class="slide">
+                <img src="accects/img/pic-1.jpg" alt="Слайд 1">
+            </div>
+            <div class="slide">
+                <img src="accects/img/pic-2.png" alt="Слайд 2">
+            </div>
+            <div class="slide">
+                <img src="accects/img/pic-3.png" alt="Слайд 3">
+            </div>
+            <div class="slide">
+                <img src="accects/img/pic-4.png" alt="Слайд 4">
+            </div>
+            <div class="slide">
+                <img src="accects/img/pic-5.jpeg" alt="Слайд 5">
+            </div>
+        </div>
+        <!-- Блок с текстом -->
+        <div class="slides-text-wrapper">
+            <div class="slides-text">
+                <div class="slide-text">
+                    <p>Проблема не на нашей стороне</p>
+                </div>
+                <div class="slide-text">
+                    <p>Так, пора кодить</p>
+                </div>
+                <div class="slide-text">
+                    <p>Я, пытающийся найти баг</p>
+                </div>
+                <div class="slide-text">
+                    <p>Действие при пожаре</p>
+                </div>
+                <div class="slide-text">
+                    <p>Уйти в ИТ</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Индикаторы (радио-кнопки) -->
+        <div class="indicators">
+            <label class="indicator" for="radio1"></label>
+            <label class="indicator" for="radio2"></label>
+            <label class="indicator" for="radio3"></label>
+            <label class="indicator" for="radio4"></label>
+            <label class="indicator" for="radio5"></label>
+        </div>
+    </div>
+</body>
+</html>
