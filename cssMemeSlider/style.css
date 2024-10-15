@@ -11,15 +11,14 @@ body {
 }
 
 .slider-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 50px auto;
-    border: 2px solid #333;
+    width: 85%;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-rows: 75% 25%;
+    grid-template-rows: 70% 15%;
     grid-template-columns: 40% 40%;
     justify-content: space-between;
-    background-color: #222;
     overflow: hidden;
 }
 
@@ -41,14 +40,19 @@ body {
 }
 
 .slide-text {
-    text-align: center;
+    text-align: left;
+    justify-content: end;
 }
 
 .slide img,
 .slide-text p {
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: block;
+}
+
+.slide img {
+    border-radius: 2%;
 }
 
 /* Прячем радио-кнопки */
@@ -86,12 +90,13 @@ input[type="radio"] {
     overflow: hidden;
     display: flex;
     align-items: center;
+    margin-left: 10%;
 }
 
 .slides-text{
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    font-size: 18px;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -103,23 +108,22 @@ input[type="radio"] {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 0 10px;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
+    width: 0.8rem;
+    height: 0.8rem;
     background-color: #888;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 0.3vw;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .indicator:hover {
-    background-color: #ee0f0f;
+    background-color: #a2ccfc;
     transition: 0.5s;
 }
 
@@ -129,5 +133,38 @@ input[type="radio"] {
 #radio3:checked ~ .indicators .indicator:nth-child(3),
 #radio4:checked ~ .indicators .indicator:nth-child(4),
 #radio5:checked ~ .indicators .indicator:nth-child(5) {
-    background-color: #fff;
+    background-color: #ffffff;
+}
+
+
+@media (max-width: 800px) and (min-width: 500px) {
+
+    .slider-container {
+        grid-template-rows: 70% 10% 10%;
+        grid-template-columns: 100%;
+    }
+
+    .slides {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .indicators {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .slides-text-wrapper {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .slides-text-wrapper {
+        margin-left: 0;
+    }
+
+    .slide-text {
+        justify-content: center;
+    }
+
 }
